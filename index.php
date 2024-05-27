@@ -2,15 +2,11 @@
 
 require 'inc/lib.php';
 
-$appid = '155008ab7ad5b4128ed6470f5f569707';
-$city  = 'Romanshorn';
-
-
 $url     = "https://api.openweathermap.org/data/2.5/weather";
 $payload = [ 
-  'q' => $city,
+  'q' => SETTINGS['app']['City'],
   'units' => 'metric',
-  'appid' => $appid
+  'appid' => SETTINGS['app']['AppId']
 ];
 
 $result = sendGet( $url, $payload, '' );

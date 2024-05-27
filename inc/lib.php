@@ -1,4 +1,6 @@
 <?php declare(strict_types=1);
+
+define( 'SETTINGS', parse_ini_file('settings.ini', true));
 /**
  * Wrap a text in a tag
  * @param string $tag Tag to wrap arount text
